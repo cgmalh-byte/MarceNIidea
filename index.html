@@ -6,76 +6,107 @@
     <title>Ni Idea | LAB By M.Rezza</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen">
+<!-- Fondo general de página: Aqua muy claro (#f4f9f9) -->
+<body class="bg-[#f4f9f9] text-slate-800 font-sans antialiased min-h-screen">
 
-    <!-- HERO SECTION -->
-    <main class="max-w-4xl mx-auto px-6 pt-16 pb-24 text-center">
+    <!-- HEADER / HERO SECTION (Fondo principal Verde Oscuro #065757) -->
+    <header class="bg-[#065757] text-white pt-16 pb-20 px-6 text-center relative border-b-4 border-[#3ab2b7]">
         
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-950/50 border border-cyan-500/30 text-cyan-400 text-xs font-medium uppercase mb-8">
+        <!-- Badge en Rosa pálido (#E1C2C2) -->
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#E1C2C2] text-[#065757] text-xs font-bold uppercase mb-8">
             LAB By M.Rezza
         </div>
 
-        <!-- El título corregido como me pediste -->
-        <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6 text-white">
-            ¿Ya estas terminando el colegio y<br>
-            <span class="text-cyan-400 underline decoration-cyan-500 decoration-wavy">Ni Idea</span> de qué hacer después?
+        <!-- Título Principal sin el "con" y en dos renglones -->
+        <h1 class="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-4 max-w-3xl mx-auto">
+            ¿Terminando el colegio y<br>
+            <span class="text-[#3ab2b7]">Ni Idea</span> de qué hacer después?
         </h1>
 
-        <p class="text-base md:text-xl text-slate-400 max-w-2xl mx-auto mb-12 font-light">
-            Olvídate de los test psicotécnicos aburridos. No eres un algoritmo. Necesitas un espacio 1:1 premium para frenar la pelota, entender quién eres y diseñar tu próximo gran paso.
+        <!-- Subtítulo en Greige aqua (#98cbcc) y bajada en Rosa pálido (#E1C2C2) en itálica -->
+        <p class="text-lg md:text-xl text-[#98cbcc] max-w-2xl mx-auto mb-4 font-medium">
+            No eres un algoritmo de orientación vocacional genérico.
         </p>
+        <p class="text-sm md:text-base text-[#E1C2C2] italic max-w-xl mx-auto font-light">
+            Necesitas un espacio premium e individual para frenar la pelota y diseñar tu propio camino.
+        </p>
+    </header>
 
-        <!-- Contenedor del video/mensaje -->
-        <div class="w-full max-w-2xl mx-auto aspect-video bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden mb-16 flex items-center justify-center shadow-xl">
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="max-w-4xl mx-auto px-6 py-16">
+        
+        <!-- Contenedor del video / Zonas colapsadas (Borde Activo Aguamarina #3ab2b7) -->
+        <div class="w-full aspect-video bg-white rounded-2xl border-2 border-[#3ab2b7] overflow-hidden mb-16 flex items-center justify-center shadow-md">
             <div class="p-6 text-center">
-                <p class="text-slate-400 text-sm font-medium">[ Dale Play: Un mensaje de Marcela Rezza ]</p>
+                <!-- Ícono o nota en Rosa (#BE7C7B) -->
+                <div class="w-12 h-12 bg-[#E1C2C2]/30 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <svg class="w-5 h-5 text-[#BE7C7B] fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+                <p class="text-[#014058] text-sm font-bold">[ Dale Play: Un mensaje de Marcela Rezza ]</p>
+                <p class="text-xs text-slate-500 mt-1">1 minuto para entender por qué la incertidumbre es tu aliada.</p>
             </div>
         </div>
 
-        <!-- Formulario de captura -->
-        <div class="w-full max-w-md mx-auto bg-slate-900 p-8 rounded-3xl border border-slate-800 shadow-2xl text-left">
-            <h3 class="text-lg font-bold mb-2 text-white">Inicia tu laboratorio individual</h3>
-            <p class="text-xs text-slate-400 mb-6">Deja tus datos para reservar una de las vacantes premium directo con Marcela.</p>
+        <!-- FORMULARIO DE CAPTURA / CTA (Fondo Verde Oscuro #065757) -->
+        <div class="w-full max-w-md mx-auto bg-[#065757] p-8 rounded-3xl border-2 border-[#3ab2b7] shadow-xl text-left text-white mb-20">
+            <h3 class="text-xl font-bold mb-2 text-white">Inicia tu laboratorio individual</h3>
+            <p class="text-xs text-[#E1C2C2] mb-6">Reserva una de las vacantes premium de escucha activa directo con Marcela.</p>
             
             <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                <!-- Tu clave de Web3Forms irá en el value de abajo -->
                 <input type="hidden" name="access_key" value="TU-CLAVE-AQUÍ">
 
                 <div>
-                    <label class="block text-[10px] uppercase tracking-wider text-slate-400 mb-1.5 font-semibold">Tu nombre completo</label>
-                    <input type="text" name="name" required placeholder="Ej. Mateo Pérez" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 text-sm focus:outline-none focus:border-cyan-500">
+                    <label class="block text-[10px] uppercase tracking-wider text-[#98cbcc] mb-1.5 font-bold">Tu nombre completo</label>
+                    <input type="text" name="name" required placeholder="Ej. Mateo Pérez" class="w-full bg-[#f4f9f9] border border-[#98cbcc] rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:border-[#3ab2b7] font-medium">
                 </div>
                 <div>
-                    <label class="block text-[10px] uppercase tracking-wider text-slate-400 mb-1.5 font-semibold">Tu mejor email</label>
-                    <input type="email" name="email" required placeholder="nombre@email.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 text-sm focus:outline-none focus:border-cyan-500">
+                    <label class="block text-[10px] uppercase tracking-wider text-[#98cbcc] mb-1.5 font-semibold">Tu mejor email</label>
+                    <input type="email" name="email" required placeholder="nombre@email.com" class="w-full bg-[#f4f9f9] border border-[#98cbcc] rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:border-[#3ab2b7] font-medium">
                 </div>
-                <button type="submit" class="w-full bg-cyan-500 hover:bg-cyan-600 text-slate-950 font-bold py-4 rounded-xl transition-colors tracking-wide text-sm mt-2">
+                
+                <!-- Botón de acento Aguamarina (#3ab2b7) -->
+                <button type="submit" class="w-full bg-[#3ab2b7] hover:bg-[#2fa0a5] text-[#065757] font-bold py-4 rounded-xl transition-colors tracking-wide text-sm mt-2 shadow-md">
                     Quiero mi diagnóstico
                 </button>
             </form>
         </div>
+
+        <!-- SECCIÓN PROPUESTA DE VALOR -->
+        <section class="mb-20">
+            <!-- Título de sección en Azulina (#014058) -->
+            <h2 class="text-2xl md:text-3xl font-black text-center text-[#014058] mb-12 tracking-tight">
+                Por qué este no es otro test de internet
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-[#98cbcc]/40 shadow-sm">
+                    <span class="text-xs font-bold text-[#BE7C7B] block mb-2 uppercase">Pregunta equivocada</span>
+                    <h4 class="text-base font-bold text-[#014058] mb-2">Cero automatizaciones</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed">No dejes tu futuro en manos de un software genérico de 80 preguntas múltiples que te encasilla en las carreras de siempre.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-[#98cbcc]/40 shadow-sm">
+                    <span class="text-xs font-bold text-[#3ab2b7] block mb-2 uppercase">Validación Real</span>
+                    <h4 class="text-base font-bold text-[#014058] mb-2">Sesiones 1:1 Premium</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed">Un espacio humano de escucha activa con Marcela Rezza para desenredar miedos, mandatos y presiones.</p>
+                </div>
+                <!-- Card 3 (Destacada con borde aguamarina) -->
+                <div class="bg-white p-6 rounded-2xl border-2 border-[#3ab2b7] shadow-sm relative">
+                    <span class="text-xs font-bold text-[#065757] block mb-2 uppercase">Nota de continuidad</span>
+                    <h4 class="text-base font-bold text-[#014058] mb-2">El Informe Personal</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed">Al cerrar, te llevas tu mapa de ruta definitivo plasmado en un documento estratégico redactado a mano: <span class="text-[#BE7C7B] font-semibold italic">"Un mensaje de Marcela para ti"</span>.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- SECCIÓN BENEFICIOS -->
-    <section class="py-24 px-6 max-w-5xl mx-auto border-t border-slate-900">
-        <div class="text-center mb-16">
-            <h2 class="text-2xl md:text-3xl font-black text-white">Por qué este no es otro test de internet</h2>
-        </div>
-        
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="bg-slate-900/50 p-8 rounded-2xl border border-slate-900">
-                <h4 class="text-lg font-bold text-slate-100 mb-3">Cero respuestas automatizadas</h4>
-                <p class="text-slate-400 text-sm leading-relaxed">No hay un software genérico que te encasille. Aquí hay una escucha humana, real y profesional de tus verdaderos intereses.</p>
-            </div>
-            <div class="bg-slate-900/50 p-8 rounded-2xl border border-slate-900">
-                <h4 class="text-lg font-bold text-slate-100 mb-3">Sesiones 1:1 Premium</h4>
-                <p class="text-slate-400 text-sm leading-relaxed">Trabajas mano a mano con Marcela Rezza, Counselor experta que entiende perfectamente las presiones y miedos de esta etapa.</p>
-            </div>
-            <div class="bg-slate-900/50 p-8 rounded-2xl border border-cyan-500/20 bg-gradient-to-b from-cyan-950/20 to-transparent">
-                <h4 class="text-lg font-bold text-white mb-3">El Informe Personal</h4>
-                <p class="text-slate-300 text-sm leading-relaxed">Al cerrar el proceso, recibes un documento íntimo y potente titulado: "Un mensaje de Marcela para ti". Tu mapa de ruta definitivo.</p>
-            </div>
-        </div>
-    </section>
+    <!-- CIERRE / FOOTER (Fondo principal Verde Oscuro #065757 y Líneas en Greige aqua #98cbcc) -->
+    <footer class="bg-[#065757] text-[#98cbcc] py-12 px-6 text-center border-t-2 border-[#98cbcc]/30 text-xs">
+        <p class="text-white font-bold mb-1">Ni Idea | LAB By M.Rezza &copy; 2026</p>
+        <p class="font-light text-[#E1C2C2] max-w-md mx-auto">Espacios premium de transformación e identidad para jóvenes frente a la era de la incertidumbre.</p>
+    </footer>
 
 </body>
 </html>
